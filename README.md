@@ -42,4 +42,11 @@ curl -X POST --data-urlencode "grant_type=authorization_code" \
             --data-urlencode "redirect_uri=https://baidu.com" \
             http://localhost:8080/oauth/token
 
+#### user service
+curl http://localhost:8081/hello
+curl http://localhost:8081/user
+curl http://localhost:8081/user -H 'Authorization: Bearer eyJh...'
+curl -X POST http://localhost:8081/user -H 'Authorization: Bearer eyJh...'
+curl -X GET http://localhost:8081/user/name -H 'Authorization: Bearer eyJh...'
+
 ```
