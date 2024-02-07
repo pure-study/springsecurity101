@@ -19,6 +19,7 @@
     <modules>
         <module>springsecurity101-cloud-oauth2-server</module>
         <module>springsecurity101-cloud-oauth2-userservice</module>
+        <module>springsecurity101-cloud-oauth2-client</module>
     </modules>
 
     <properties>
