@@ -33,7 +33,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
     @Bean
     protected JwtAccessTokenConverter jwtAccessTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-        Resource resource = new ClassPathResource("public.cert");
+        Resource resource = new ClassPathResource("key.pub");
         String publicKey = null;
         try {
             publicKey = new String(FileCopyUtils.copyToByteArray(resource.getInputStream()));
