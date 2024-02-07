@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  db:
+    image: mysql:8.3.0
+    container_name: oauth2-db
+    environment:
+      MYSQL_ROOT_PASSWORD: kIo9u7Oi0eg
+    ports:
+      - "6657:3306"
+    volumes:
+      - ./db/init-scripts:/docker-entrypoint-initdb.d/

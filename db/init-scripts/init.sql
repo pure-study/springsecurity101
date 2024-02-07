@@ -1,3 +1,7 @@
+-- DROP DATABASE oauth;
+CREATE DATABASE oauth;
+USE oauth;
+
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
