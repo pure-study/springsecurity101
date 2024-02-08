@@ -18,6 +18,12 @@ services:
     depends_on:
       - oauth2-db
 
+  userservice:
+    image: springsecurity101/userservice:1.0.0
+    container_name: userservice
+    ports:
+      - "8081:8081"
+
 networks:
   default:
     name: oauth2-net
