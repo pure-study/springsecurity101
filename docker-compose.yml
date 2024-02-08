@@ -24,11 +24,20 @@ services:
     ports:
       - "8081:8081"
 
-  client:
+  oauth2-client1:
     image: springsecurity101/client:1.0.0
-    container_name: client
+    container_name: oauth2-client1
     ports:
       - "8083:8083"
+    depends_on:
+      - oauth2-server
+      - userservice
+
+  oauth2-client2:
+    image: springsecurity101/client:1.0.0
+    container_name: oauth2-client2
+    ports:
+      - "8082:8083"
     depends_on:
       - oauth2-server
       - userservice

@@ -68,5 +68,8 @@ http://localhost:8083/ui/remoteCall
 
 ## Containerization for SSO tests with multiple client services:
 ```shell
+# Browser:
+http://localhost:8082/ui/securedPage
 
+http://localhost:8082/ui/remoteCall
 ```
