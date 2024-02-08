@@ -62,4 +62,6 @@ Client tests:
 ```shell
 # Browser:
 http://localhost:8083/ui/securedPage
+
+http://localhost:8083/ui/remoteCall
 ```
