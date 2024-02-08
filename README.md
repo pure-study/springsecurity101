@@ -57,3 +57,9 @@ curl -X POST http://localhost:8081/user -H 'Authorization: Bearer eyJh...'
 curl -X GET http://localhost:8081/user/name -H 'Authorization: Bearer eyJh...'
 
 ```
+
+Client tests:
+```shell
+# Browser:
+http://localhost:8083/ui/securedPage
+```
