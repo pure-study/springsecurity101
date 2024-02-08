@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  db:
+  oauth2-db:
     image: mysql:8.3.0
     container_name: oauth2-db
     environment:
@@ -9,3 +9,15 @@ services:
       - "6657:3306"
     volumes:
       - ./db/init-scripts:/docker-entrypoint-initdb.d/
+
+  oauth2-server:
+    image: springsecurity101/oauth2-server:1.0.0
+    container_name: oauth2-server
+    ports:
+      - "8080:8080"
+    depends_on:
+      - oauth2-db
+
+networks:
+  default:
+    name: oauth2-net

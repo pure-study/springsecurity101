@@ -2,7 +2,7 @@
 
 A custom test of [JosephZhu1983/SpringSecurity101](https://github.com/JosephZhu1983/SpringSecurity101)
 
-Preparation:
+## Preparation:
 ```shell
 # Generate keys and certs
 keytool -genkey -alias jwt -keyalg RSA -keypass changeit -keystore jwt.jks
@@ -10,13 +10,13 @@ keytool -genkey -alias jwt -keyalg RSA -keypass changeit -keystore jwt.jks
 keytool -list -rfc -storepass changeit -keystore jwt.jks | openssl x509 -inform pem -pubkey
 ```
 
-Database related:
+## Database related:
 ```shell
 mysql -u root -ppassword oauth
 select * from oauth_approvals;
 ```
 
-Tests of OAuth2 server alone:
+## Tests of OAuth2 server alone:
 ```shell
 curl -X POST --data-urlencode "grant_type=password" \
             --data-urlencode "client_id=userservice1" \
@@ -48,7 +48,7 @@ curl -X POST --data-urlencode "grant_type=authorization_code" \
 
 ```
 
-User service (the protected resources) tests:
+## User service (the protected resources) tests:
 ```shell
 curl http://localhost:8081/hello
 curl http://localhost:8081/user
@@ -58,10 +58,15 @@ curl -X GET http://localhost:8081/user/name -H 'Authorization: Bearer eyJh...'
 
 ```
 
-Client tests:
+## Client tests:
 ```shell
 # Browser:
 http://localhost:8083/ui/securedPage
 
 http://localhost:8083/ui/remoteCall
+```
+
+## Containerization for SSO tests with multiple client services:
+```shell
+
 ```
