@@ -109,7 +109,7 @@ INSERT INTO `oauth_client_details` VALUES (
     '1234',
     'FOO',
     'authorization_code,refresh_token',
-    'https://baidu.com,http://localhost:8082/ui/login,http://localhost:8083/ui/login,http://localhost:8082/ui/remoteCall',
+    'https://baidu.com,http://localhost:8082/ui/login,http://localhost:8083/ui/login',
     'READ,WRITE',
     7200,
     NULL,
