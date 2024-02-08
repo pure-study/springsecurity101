@@ -20,7 +20,7 @@ public class DemoController {
 
     @GetMapping("/remoteCall")
     public String remoteCall() {
-        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8081/user/name", String.class);
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://userservice:8081/user/name", String.class);
         return responseEntity.getBody();
     }
 }

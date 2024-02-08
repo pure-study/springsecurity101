@@ -24,6 +24,15 @@ services:
     ports:
       - "8081:8081"
 
+  client:
+    image: springsecurity101/client:1.0.0
+    container_name: client
+    ports:
+      - "8083:8083"
+    depends_on:
+      - oauth2-server
+      - userservice
+
 networks:
   default:
     name: oauth2-net
